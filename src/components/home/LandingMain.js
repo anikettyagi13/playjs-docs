@@ -22,7 +22,7 @@ export default function LandingAnimation() {
     TextAnimations('.play_words')
     let js = TextCleaner('JS', 'js_words')
     setJsHTML(js)
-    TextAnimations('.js_words', 1200)
+    TextAnimations('.js_words', 1400)
     SVGAnimation()
     BorderAnimation()
     LoadingAnimation()

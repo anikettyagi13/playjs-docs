@@ -1,5 +1,4 @@
 import { play } from '../../play.min'
-
 export function TextCleaner(target, classed) {
   let elements = target.split('')
   let html = ''
@@ -18,6 +17,7 @@ export function TextAnimations(target, delay = 0) {
     delay,
     iteration: true,
     endDelay: 4000,
+    late: 400,
   })
 }
 export function SVGAnimation() {
@@ -42,16 +42,13 @@ export function SVGAnimation() {
   play({
     targets: '#play_icon',
     translateX: [0, 200],
-    // opacity: [1, 0],
     delay: 5000,
     duration: 1000,
     endDelay: 5000,
-    // animation: 'ease-out-',
     iteration: true,
   })
   play({
     targets: '#play_icon',
-    // translateX: [0, 200],
     opacity: [1, 0],
     delay: 5000,
     duration: 1000,
@@ -100,7 +97,7 @@ export function OnViewAnimation(target, threshold) {
     targets: target,
     translateY: [300, 0],
     duration: 1500,
-    opacity: [0.5, 1],
+    opacity: [0, 1],
     threshold: threshold,
     late: 0,
     whenVisible: true,
@@ -140,6 +137,7 @@ export function AnimateBlock() {
     animation: 'ease-linear',
     endDelay: 3000,
     threshold: 1,
+    whenVisible: true,
     iteration: true,
   })
   play({

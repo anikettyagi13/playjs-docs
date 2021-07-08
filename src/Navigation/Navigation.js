@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        <Route path="/" component={Home}></Route>
         <Route path="/documentation" component={Documentation} />
       </Switch>
     </Router>
