@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/playjs-docs/static/css/main.5b9f8dd4.chunk.css",
-    "main.js": "/playjs-docs/static/js/main.5e5d8a06.chunk.js",
-    "main.js.map": "/playjs-docs/static/js/main.5e5d8a06.chunk.js.map",
+    "main.css": "/playjs-docs/static/css/main.1134f46b.chunk.css",
+    "main.js": "/playjs-docs/static/js/main.dee05e0f.chunk.js",
+    "main.js.map": "/playjs-docs/static/js/main.dee05e0f.chunk.js.map",
     "runtime-main.js": "/playjs-docs/static/js/runtime-main.8cefd3fc.js",
     "runtime-main.js.map": "/playjs-docs/static/js/runtime-main.8cefd3fc.js.map",
-    "static/js/2.b3bfd1e2.chunk.js": "/playjs-docs/static/js/2.b3bfd1e2.chunk.js",
-    "static/js/2.b3bfd1e2.chunk.js.map": "/playjs-docs/static/js/2.b3bfd1e2.chunk.js.map",
+    "static/js/2.ae4bb4ff.chunk.js": "/playjs-docs/static/js/2.ae4bb4ff.chunk.js",
+    "static/js/2.ae4bb4ff.chunk.js.map": "/playjs-docs/static/js/2.ae4bb4ff.chunk.js.map",
     "index.html": "/playjs-docs/index.html",
-    "static/css/main.5b9f8dd4.chunk.css.map": "/playjs-docs/static/css/main.5b9f8dd4.chunk.css.map",
-    "static/js/2.b3bfd1e2.chunk.js.LICENSE.txt": "/playjs-docs/static/js/2.b3bfd1e2.chunk.js.LICENSE.txt"
+    "static/css/main.1134f46b.chunk.css.map": "/playjs-docs/static/css/main.1134f46b.chunk.css.map",
+    "static/js/2.ae4bb4ff.chunk.js.LICENSE.txt": "/playjs-docs/static/js/2.ae4bb4ff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8cefd3fc.js",
-    "static/js/2.b3bfd1e2.chunk.js",
-    "static/css/main.5b9f8dd4.chunk.css",
-    "static/js/main.5e5d8a06.chunk.js"
+    "static/js/2.ae4bb4ff.chunk.js",
+    "static/css/main.1134f46b.chunk.css",
+    "static/js/main.dee05e0f.chunk.js"
   ]
 }
