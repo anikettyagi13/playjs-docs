@@ -1,5 +1,7 @@
 import React, { createRef, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import Navigation from '../../Navigation/Navigation'
+import { NavigationReference } from '../../Navigation/NavigationRefrence'
 export default function FinalScreen() {
   const docuRef = useRef(null)
   function openDocumentation() {
@@ -45,7 +47,7 @@ export default function FinalScreen() {
           />
         </div>
       </div>
-      <Link to="/documentation" ref={docuRef}></Link>
+      <Link to={NavigationReference.Targets} ref={docuRef}></Link>
     </section>
   )
 }

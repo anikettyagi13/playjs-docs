@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+import { NavigationReference } from '../../Navigation/NavigationRefrence'
+
 export default function HomeNavigation() {
   return (
     <>
@@ -18,7 +21,16 @@ export default function HomeNavigation() {
           <span id="play">PLAY</span> <span id="js">JS</span>
         </div>
         <div id="navs">
-          <div>DOCUMENTATION</div>
+          <div>
+            <Link
+              to={NavigationReference.Targets}
+              color="secondary"
+              style={{ color: '#1B3038', textDecoration: 'none' }}
+            >
+              {' '}
+              DOCUMENTATION
+            </Link>
+          </div>
           <div>GITHUB</div>
         </div>
       </nav>

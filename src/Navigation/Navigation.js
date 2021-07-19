@@ -1,13 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from '../components/home/Home'
-import Documentation from '../components/documentation/Documentation'
+import { NavigationReference } from './NavigationRefrence'
+import Layout from '../components/appBar'
 export default function Navigation() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Home}></Route>
-        <Route path="/documentation" component={Documentation} />
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path={NavigationReference.home} component={Home}></Route>
+        <Route path={NavigationReference.documentation} component={Layout} />
       </Switch>
     </Router>
   )

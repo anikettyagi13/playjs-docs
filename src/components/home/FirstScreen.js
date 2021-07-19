@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { NavigationReference } from '../../Navigation/NavigationRefrence'
 
 import { MouseOver, MouseLeave } from './LandingAnimations'
 export default function FirstScreen({ playHTML, jsHTML }) {
@@ -86,11 +88,17 @@ export default function FirstScreen({ playHTML, jsHTML }) {
           onMouseLeave={() => MouseLeave('.docs img')}
           style={{ margin: '0px 0px 0px 30x' }}
         >
-          <img
-            src="https://img.icons8.com/ios-glyphs/30/000000/service.png"
-            alt="DOCS"
-          />
-          <span>DOCUMENTATION</span>
+          <Link
+            to={NavigationReference.documentation}
+            color="secondary"
+            style={{ color: '#1B3038', textDecoration: 'none' }}
+          >
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/000000/service.png"
+              alt="DOCS"
+            />
+            <span>DOCUMENTATION</span>
+          </Link>
         </div>
       </div>
     </div>

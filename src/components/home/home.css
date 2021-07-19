@@ -169,6 +169,7 @@ nav {
 .card2 {
   display: grid;
   /* align-self: flex-end; */
+  height: 280px;
   filter: blur(1px);
   -webkit-filter: blur(1px);
   align-content: space-between;
@@ -178,14 +179,14 @@ nav {
   -webkit-filter: blur(0px);
 }
 .cardimg {
-  top: 150px;
+  top: 130px;
   position: absolute;
   filter: blur(0px);
   -webkit-filter: blur(0px);
   transition: all 1s;
 }
 .card:hover .cardimg {
-  top: 170px;
+  top: 150px;
   filter: blur(2px);
   -webkit-filter: blur(2px);
 }
