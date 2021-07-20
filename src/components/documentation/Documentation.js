@@ -29,7 +29,7 @@ export default function Documentation() {
           alignItems="center"
           style={{ marginTop: '30px' }}
         >
-          <a href={NavigationReference.home}>
+          <a href={`/playjs-docs#${NavigationReference.home}`}>
             <img
               src={logo}
               alt="PLAY JS"

@@ -1,9 +1,9 @@
 export const NavigationReference = {
-  documentation: '/playjs-docs/documentation',
-  home: '/playjs-docs/',
-  Targets: '/playjs-docs/documentation/Targets',
-  Animations: '/playjs-docs/documentation/Animations',
-  SVG: '/playjs-docs/documentation/SVG',
-  Properties: '/playjs-docs/documentation/Properties',
+  documentation: '/documentation',
+  home: '/',
+  Targets: '/documentation/Targets',
+  Animations: '/documentation/Animations',
+  SVG: '/documentation/SVG',
+  Properties: '/documentation/Properties',
   Parameters: '/playjs-docs/documentation/Parameters',
 }

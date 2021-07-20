@@ -1,10 +1,16 @@
+/* eslint-disable no-script-url */
 import { Button, Divider, Grid, Link, Typography } from '@material-ui/core'
 import React from 'react'
+import { NavigationReference } from '../../../Navigation/NavigationRefrence'
 import TargetArrays from './TargetArrays/TargetArrays'
 import TargetStrings from './TargetStrings/TargetStrings'
 
 export default function Targets() {
-  function smoothScrollTo(target) {}
+  function smoothScrollTo(target) {
+    document.querySelector(target).scrollIntoView({
+      behaviour: 'smooth',
+    })
+  }
   return (
     <Grid container xs={12}>
       <Grid
@@ -34,8 +40,8 @@ export default function Targets() {
               <Typography variant="h6">
                 {' '}
                 <a
-                  onClick={(e) => smoothScrollTo('Strings')}
-                  href="#Strings"
+                  onClick={(e) => smoothScrollTo('#Strings')}
+                  href={`javaScript:void(0)`}
                   style={{ color: '#F4A261', cursor: 'pointer' }}
                 >
                   STRINGS
@@ -47,8 +53,8 @@ export default function Targets() {
               <Typography variant="h6">
                 {' '}
                 <a
-                  id="link"
-                  href="#Arrays"
+                  onClick={(e) => smoothScrollTo('#Arrays')}
+                  href={`javaScript:void(0)`}
                   style={{ color: '#F4A261', cursor: 'pointer' }}
                 >
                   ARRAYS
