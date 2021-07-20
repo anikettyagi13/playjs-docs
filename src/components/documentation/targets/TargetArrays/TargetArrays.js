@@ -13,7 +13,7 @@ export default function TargetArrays() {
   const codeBlock =
     'play({<span>&emsp;targets: &emsp;[CSS SELECTOR 1 , CSS SELECTOR 2],</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;translateX:&emsp;250</span> <br/>})'
   const info =
-    "Write the classname in the input field (multiple allowed) and click on PLAY NOW to see the how to select different targets. Classes-: '.yellow' & '.red' "
+    "Write the classname in the input field (multiple allowed) and click on PLAY NOW to see how to select different targets. Classes-: '.yellow' & '.red' "
   useEffect(() => {
     // const re = new RegExp(/"+'/g)
     let k = document.getElementsByClassName('targetArray')[0].value

@@ -89,7 +89,7 @@ export default function FirstScreen({ playHTML, jsHTML }) {
           style={{ margin: '0px 0px 0px 30x' }}
         >
           <Link
-            to={NavigationReference.Targets}
+            to={NavigationReference.Targets.index}
             color="secondary"
             style={{ color: '#1B3038', textDecoration: 'none' }}
           >

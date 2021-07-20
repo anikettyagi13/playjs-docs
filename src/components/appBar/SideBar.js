@@ -157,10 +157,7 @@ const AccordionSummary = withStyles({
 export default function SideBar({ handleDrawerClose, open }) {
   const classes = useStyles()
   const theme = useTheme()
-  const location = window.location.href
-    .split('-')[1]
-    .split('/')[2]
-    .split('#')[0]
+  const location = window.location.href.split('-')[1].split('/')[3]
   const [opened, setOpened] = useState(location)
   const [linkTo, setLinkTo] = useState(NavigationReference[opened])
   const linkRef = createRef()
@@ -168,15 +165,29 @@ export default function SideBar({ handleDrawerClose, open }) {
     linkRef.current.click()
   }, [linkTo])
 
-  useEffect(() => {
-    console.log(opened)
-    setLinkTo(NavigationReference[opened])
-  }, [opened])
+  function SetLinkAndOpened(open, e) {
+    let k = 0
+    for (var i in NavigationReference) {
+      if (open === i) {
+        setOpened(open)
+        setLinkTo(NavigationReference[open].index)
+        k = 1
+        break
+      }
+    }
+    if (k !== 1) {
+      e.stopPropagation()
+      setLinkTo(NavigationReference[opened][open])
+    }
+  }
   function ALink(navi, i, isChild) {
     return (
       <ListItem
         button
         className={isChild ? classes.onlyHeight : classes.ListItem}
+        onClick={(e) => {
+          SetLinkAndOpened(i, e)
+        }}
       >
         <ListItemIcon>{navi.icon}</ListItemIcon>
         <Typography className={isChild ? classes.typoSmall : classes.typoBig}>
@@ -205,7 +216,7 @@ export default function SideBar({ handleDrawerClose, open }) {
                 expanded={opened === i}
                 elevation={0}
                 onClick={() => {
-                  setOpened(i)
+                  SetLinkAndOpened(i)
                 }}
               >
                 <AccordionSummary>

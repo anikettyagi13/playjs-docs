@@ -23,7 +23,7 @@ export default function HomeNavigation() {
         <div id="navs">
           <div>
             <Link
-              to={NavigationReference.Targets}
+              to={NavigationReference.Targets.index}
               color="secondary"
               style={{ color: '#1B3038', textDecoration: 'none' }}
             >

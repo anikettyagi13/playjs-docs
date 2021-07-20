@@ -47,7 +47,7 @@ export default function FinalScreen() {
           />
         </div>
       </div>
-      <Link to={NavigationReference.Targets} ref={docuRef}></Link>
+      <Link to={NavigationReference.Targets.index} ref={docuRef}></Link>
     </section>
   )
 }

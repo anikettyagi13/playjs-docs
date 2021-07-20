@@ -6,10 +6,10 @@ import TableChartIcon from '@material-ui/icons/TableChart'
 
 export const SideBarNavigationAssociated = {
   Targets: {
-    url: NavigationReference.Targets,
+    url: NavigationReference.Targets.index,
     icon: <HighlightOffIcon />,
     children: {
-      String: {},
+      Strings: {},
       Arrays: {},
     },
   },

@@ -67,14 +67,14 @@ export default function LandingAnimation() {
                 Animations are getting more and more important in websites.
                 <br />
                 <br />
-                PlayJS is a powerfull JavaScript animation library, which takes
+                PlayJS is a powerful JavaScript animation library, which takes
                 care of the nitty gritty of animations and provides you with a
                 simple easy to use INTERFACE.
                 <br />
                 <br /> PlayJS helps to animate <strong>
                   DOM elements
                 </strong> , <strong> CSS properties</strong> and
-                <strong>SVGs</strong>.{' '}
+                <strong> SVGs</strong>.{' '}
               </p>
             </span>
           </div>

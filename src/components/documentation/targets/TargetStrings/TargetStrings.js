@@ -12,7 +12,7 @@ export default function TargetStrings() {
   const codeBlock =
     "play({<span>&emsp;targets: &emsp;'CSS SELECTOR HERE',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;translateX:&emsp;250</span> <br/>})"
   const info =
-    "Write the classname in the input field and click on PLAY NOW to see the how to select different targets. Classes-: '.yellow' & '.red' "
+    "Write the classname in the input field and click on PLAY NOW to see how to select different targets. Classes-: '.yellow' & '.red' "
   useEffect(() => {
     if (
       document.getElementsByClassName('targetString')[0].value.length > 1 &&

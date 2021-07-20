@@ -12,7 +12,7 @@ export default function Documentation() {
   return (
     <>
       <Switch>
-        <Route path={NavigationReference.Targets} component={Targets} />
+        <Route path={NavigationReference.Targets.index} component={Targets} />
         <Route path={NavigationReference.Animations} component={Animations} />
       </Switch>
       <Grid container item xs={12} style={{ marginTop: '60px' }}>
