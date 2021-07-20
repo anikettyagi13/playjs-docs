@@ -7,14 +7,22 @@ import Code from '../../../Code&PlayGround/Code'
 export default function TargetStrings() {
   const [play, setPlay] = useState('')
   const [code] = useState(
-    "play({<span>&emsp;targets: &emsp;'<input type='text' placeholder='write here' class='targetString'/>',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;translateX:&emsp;250</span> <br/>})",
+    "play({<span>&emsp;targets: &emsp;'<input type='text' placeholder='write here' value='.red' class='targetString'/>',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;translateX:&emsp;250</span> <br/>})",
   )
   const codeBlock =
     "play({<span>&emsp;targets: &emsp;'CSS SELECTOR HERE',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;translateX:&emsp;250</span> <br/>})"
   const info =
     "Write the classname in the input field and click on PLAY NOW to see the how to select different targets. Classes-: '.yellow' & '.red' "
   useEffect(() => {
-    if (document.getElementsByClassName('targetString')[0].value.length > 1) {
+    if (
+      document.getElementsByClassName('targetString')[0].value.length > 1 &&
+      play !== ''
+    ) {
+      console.log(
+        document.querySelectorAll(
+          document.getElementsByClassName('targetString')[0].value,
+        ),
+      )
       Play({
         targets: document.getElementsByClassName('targetString')[0].value,
         translateX: 250,
@@ -53,7 +61,14 @@ export default function TargetStrings() {
           <Code codeBlock={codeBlock}></Code>
         </Grid>
       </Grid>
-      <CodePlayGround code={code} setPlay={setPlay} play={play} info={info} />
+      <CodePlayGround
+        code={code}
+        setPlay={setPlay}
+        play={play}
+        info={info}
+        class1={'yellow'}
+        class2={'red'}
+      />
     </Grid>
   )
 }
