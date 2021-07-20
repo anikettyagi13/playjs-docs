@@ -71,7 +71,8 @@ export default function Layout() {
   const [open, setOpen] = React.useState(
     window.screen.width > 780 ? true : false,
   )
-  if (!window.location.href.split('-')[1].split('/')[2]) {
+  console.log(window.location.href.split('-')[1].split('/')[3])
+  if (!window.location.href.split('-')[1].split('/')[3]) {
     window.location.href += '/Targets'
   }
   const handleDrawerOpen = () => {
