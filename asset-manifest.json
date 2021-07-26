@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/playjs-docs/static/css/main.64f7dba7.chunk.css",
-    "main.js": "/playjs-docs/static/js/main.4d407536.chunk.js",
-    "main.js.map": "/playjs-docs/static/js/main.4d407536.chunk.js.map",
+    "main.js": "/playjs-docs/static/js/main.dd9e44a2.chunk.js",
+    "main.js.map": "/playjs-docs/static/js/main.dd9e44a2.chunk.js.map",
     "runtime-main.js": "/playjs-docs/static/js/runtime-main.8cefd3fc.js",
     "runtime-main.js.map": "/playjs-docs/static/js/runtime-main.8cefd3fc.js.map",
     "static/js/2.5dd6bf5d.chunk.js": "/playjs-docs/static/js/2.5dd6bf5d.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.8cefd3fc.js",
     "static/js/2.5dd6bf5d.chunk.js",
     "static/css/main.64f7dba7.chunk.css",
-    "static/js/main.4d407536.chunk.js"
+    "static/js/main.dd9e44a2.chunk.js"
   ]
 }
