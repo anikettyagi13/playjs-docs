@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   font-family: 'Poppins';
+  overflow-x: hidden;
   font-size: 16px;
 }
 html {
@@ -22,7 +23,7 @@ html {
 .info {
   display: grid;
   align-content: center;
-  height: 200px;
+  height: 210px;
   padding: 30px;
 }
 .play-info {
@@ -38,7 +39,8 @@ html {
   color: rgb(184, 184, 87);
 }
 
-.exceptBlue input {
+.exceptBlue input,
+select {
   /* width: 50px; */
   background-color: rgb(50, 74, 83);
   color: rgb(224, 175, 175);
@@ -49,4 +51,30 @@ html {
 }
 .exceptBlue input:focus {
   outline: none;
+}
+
+/* table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  max-width: 100%;
+  border-radius: 10px;
+  table-layout: fixed;
+  
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  min-width: 200px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+@media (max-width: 600px) {
+  html {
+    font-size: 14px !important;
+  }
 }

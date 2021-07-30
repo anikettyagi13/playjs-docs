@@ -9,9 +9,6 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import InboxIcon from '@material-ui/icons/MoveToInbox'
-import MailIcon from '@material-ui/icons/Mail'
 import logo from '../../images/logo.png'
 import clsx from 'clsx'
 
@@ -20,7 +17,6 @@ import { withStyles } from '@material-ui/core/styles'
 import MuiAccordion from '@material-ui/core/Accordion'
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary'
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { SideBarNavigationAssociated } from '../../Navigation/SideBarNavigationAssociated'
 import { Link } from 'react-router-dom'
 import { NavigationReference } from '../../Navigation/NavigationRefrence'
@@ -177,6 +173,7 @@ export default function SideBar({ handleDrawerClose, open }) {
     }
     if (k !== 1) {
       e.stopPropagation()
+      console.log(open)
       setLinkTo(NavigationReference[opened][open])
     }
   }

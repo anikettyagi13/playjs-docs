@@ -7,8 +7,10 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px',
     alignItems: 'center',
     justifyContent: 'center',
+    // position: 'relative',
   },
   div: {
+    // position: 'absolute',
     borderRadius: '5px',
     height: '50px',
     width: '50px',
@@ -26,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PlayGround({ class1, class2 }) {
   const classes = useStyles()
-  console.log(class1, class2)
   return (
     <div className={classes.playground}>
       <div className={`${classes.div} ${classes.red} ${class2}`}>

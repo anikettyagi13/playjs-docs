@@ -22,17 +22,32 @@ export const SideBarNavigationAssociated = {
       />
     ),
     children: {
-      width: {},
-      height: {},
+      'How To Use': {},
+      'Available Animations': {},
     },
   },
   Parameters: {
     url: NavigationReference.Parameters,
     icon: <TuneIcon />,
+    children: {
+      Duration: {},
+      Delay: {},
+      EndDelay: {},
+      Late: {},
+      Direction: {},
+    },
   },
   Properties: {
     url: NavigationReference.Properties,
     icon: <TableChartIcon />,
+    children: {
+      Iteration: {},
+      'When Visible': {},
+      Threshold: {},
+      'Return To Initial': {},
+      Play: {},
+      'Animation Function': {},
+    },
   },
   SVG: {
     url: NavigationReference.SVG,

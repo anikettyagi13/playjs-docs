@@ -50,7 +50,7 @@ export default function Targets() {
                   {' '}
                   <a
                     onClick={(e) => smoothScrollTo('#Strings')}
-                    href={`javaScript:void(0)`}
+                    href="javascipt:void(0)"
                     style={{ color: '#F4A261', cursor: 'pointer' }}
                   >
                     STRINGS

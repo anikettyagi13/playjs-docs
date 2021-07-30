@@ -6,6 +6,8 @@ import theme from '../../Theme'
 import Animations from './animations'
 import Targets from './targets'
 import logo from '../../images/logo.png'
+import Parameters from './parameters'
+import Properties from './properties'
 // import { Redirect } from 'react-router-dom'
 
 export default function Documentation() {
@@ -13,7 +15,18 @@ export default function Documentation() {
     <>
       <Switch>
         <Route path={NavigationReference.Targets.index} component={Targets} />
-        <Route path={NavigationReference.Animations} component={Animations} />
+        <Route
+          path={NavigationReference.Animations.index}
+          component={Animations}
+        />
+        <Route
+          path={NavigationReference.Parameters.index}
+          component={Parameters}
+        />
+        <Route
+          path={NavigationReference.Properties.index}
+          component={Properties}
+        />
       </Switch>
       <Grid container item xs={12} style={{ marginTop: '60px' }}>
         <Divider

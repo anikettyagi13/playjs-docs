@@ -13,8 +13,8 @@ export default function CodePlayGround({
   class2,
 }) {
   return (
-    <Grid container xs={12} spacing={2}>
-      <Grid container item xs={12} spacing={3}>
+    <Grid container xs={12}>
+      <Grid container item xs={12} spacing={2} justifyContent="center">
         <Grid container item xs={12} md={6}>
           <Info info={info} />
         </Grid>
@@ -33,7 +33,12 @@ export default function CodePlayGround({
       </Grid>
       <Grid container item xs={12}>
         <Grid container item md={6} xs={12}>
-          <Grid container item className="playground">
+          <Grid
+            container
+            item
+            className="playground"
+            style={{ marginTop: '30px' }}
+          >
             <PlayGround class1={class1} class2={class2} />
           </Grid>
         </Grid>
