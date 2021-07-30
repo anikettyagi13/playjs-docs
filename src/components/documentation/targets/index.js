@@ -7,13 +7,21 @@ import TargetStrings from './TargetStrings/TargetStrings'
 
 export default function Targets() {
   function smoothScrollTo(target) {
-    document.querySelector(target).scrollIntoView({
-      behaviour: 'smooth',
-    })
+    try {
+      document.querySelector(target).scrollIntoView({
+        behaviour: 'smooth',
+      })
+    } catch (e) {
+      console.error(e)
+    }
   }
   function getIfSmoothScrollInitially() {
-    if (window.location.href.split('-')[1].split('/')[4]) {
-      smoothScrollTo(`#${window.location.href.split('-')[1].split('/')[4]}`)
+    try {
+      if (window.location.href.split('-')[1].split('/')[4]) {
+        smoothScrollTo(`#${window.location.href.split('-')[1].split('/')[4]}`)
+      }
+    } catch (e) {
+      console.error(e)
     }
   }
   useEffect(() => {

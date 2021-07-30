@@ -11,6 +11,7 @@ export default function CodePlayGround({
   info,
   class1,
   class2,
+  useSVG,
 }) {
   return (
     <Grid container xs={12}>
@@ -39,7 +40,7 @@ export default function CodePlayGround({
             className="playground"
             style={{ marginTop: '30px' }}
           >
-            <PlayGround class1={class1} class2={class2} />
+            <PlayGround class1={class1} class2={class2} useSVG={useSVG} />
           </Grid>
         </Grid>
         <Grid container item md={6} xs={12}>

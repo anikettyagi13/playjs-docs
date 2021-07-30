@@ -57,5 +57,8 @@ export const SideBarNavigationAssociated = {
         alt="SVG"
       />
     ),
+    children: {
+      'SVG MORPHING': {},
+    },
   },
 }

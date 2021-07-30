@@ -8,6 +8,7 @@ import Targets from './targets'
 import logo from '../../images/logo.png'
 import Parameters from './parameters'
 import Properties from './properties'
+import SVG from './svg'
 // import { Redirect } from 'react-router-dom'
 
 export default function Documentation() {
@@ -27,6 +28,7 @@ export default function Documentation() {
           path={NavigationReference.Properties.index}
           component={Properties}
         />
+        <Route path={NavigationReference.SVG.index} component={SVG} />
       </Switch>
       <Grid container item xs={12} style={{ marginTop: '60px' }}>
         <Divider

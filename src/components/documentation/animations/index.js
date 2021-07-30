@@ -7,11 +7,6 @@ import { NavigationReference } from '../../../Navigation/NavigationRefrence'
 import AvailableAnimations from './submenu/AvailableAnimations'
 
 export default function Animations() {
-  function smoothScrollTo(target) {
-    document.querySelector(target).scrollIntoView({
-      behaviour: 'smooth',
-    })
-  }
   return (
     <>
       <Switch>

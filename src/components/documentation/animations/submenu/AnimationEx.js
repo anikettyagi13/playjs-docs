@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 export default function AnimationEx() {
   const [play, setPlay] = useState('')
   const [play2, setPlay2] = useState('')
+  const [play3, setPlay3] = useState('')
   const [code] = useState(
     "play({<span>&emsp;targets:['.red','.yellow'] &emsp;,</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;width:&emsp;'<input type='text' placeholder='write here' value='200px' class='widthString'/>'</span> <br/>})",
   )
@@ -24,6 +25,13 @@ export default function AnimationEx() {
     "play({<span>&emsp;targets: &emsp;'CSS SELECTOR HERE',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;width:&emsp;[250, 500]</span> <br/>})"
   const info2 =
     'In this example we are using Width to show the animations. Write the final width of the blocks. Initial width of the blocks is 50px so 200% would be 100px. For eg. [100,200], [100px,200px], [100%,200%]'
+  const [code3] = useState(
+    "play({<span>&emsp;targets:['.red','.yellow'] &emsp;,</span> <br/><span>&emsp;duration:&emsp;2500,</span><br/><span>&emsp;width:&emsp;()=>{<br/>&emsp;&emsp;return random(50,200)<br/>&emsp;}</span> <br/>&emsp;direction:&emsp;'alternate' <br/>&emsp;iteration:&emsp;true})",
+  )
+  const codeBlock3 =
+    "play({<span>&emsp;targets: &emsp;'CSS SELECTOR HERE',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;width:&emsp;your function</span> <br/>})"
+  const info3 =
+    'In this example we are using Width to show the animations. The function is written for you. Press the PLAY NOW button to see the animation.'
 
   useEffect(() => {
     if (
@@ -57,6 +65,22 @@ export default function AnimationEx() {
       })
     }
   }, [play2])
+  useEffect(() => {
+    if (play3 !== '') {
+      console.log('asdas', document.getElementsByClassName('yellowFunction'))
+      Play({
+        targets: ['.redFunction', '.yellowFunction'],
+        duration: 2500,
+        late: 0,
+        width: () => {
+          return Play.random(50, 200)
+        },
+        direction: 'alternate',
+        iteration: true,
+      })
+    }
+  }, [play3])
+
   function smoothScrollTo(target) {
     document.querySelector(target).scrollIntoView({
       behaviour: 'smooth',
@@ -176,13 +200,46 @@ export default function AnimationEx() {
             class1={'yellowArray'}
             class2={'redArray'}
           />
+          <Grid
+            container
+            item
+            justifyContent="center"
+            spacing={3}
+            style={{ marginBottom: '15px' }}
+            id="WidthArray"
+          >
+            <Grid item xs={12} style={{ textAlign: 'center' }}>
+              <Grid item xs={12} style={{ textAlign: 'center' }}>
+                <Typography variant="h3">HOW TO USE - Functions</Typography>
+              </Grid>
+              <Typography variant="p">
+                <br />
+                Functions are used to get some value based on which animation
+                will work. These functions will be called after the animations
+                has been finished and requires a new value for animation. Play
+                js provides a function random which you can Use
+                <br />
+                <br />
+                random(end, start) // function parameters
+              </Typography>
+            </Grid>
+            <Grid className="code info">
+              <Code codeBlock={codeBlock3}></Code>
+            </Grid>
+          </Grid>
+          <CodePlayGround
+            code={code3}
+            setPlay={setPlay3}
+            play={play3}
+            info={info3}
+            class1={'yellowFunction'}
+            class2={'redFunction'}
+          />
 
           {/* <Link></Link> */}
         </Grid>
       </Grid>
-      <Grid container xs={12} item id="Arrays">
-        {/* <TargetArrays /> */}
-      </Grid>
+
       <br />
       <br />
       <Grid container item justifyContent="flex-end">

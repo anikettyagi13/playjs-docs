@@ -11,7 +11,10 @@ export const NavigationReference = {
     'How To Use': '/documentation/Animations/How-to-use',
     'Available Animations': '/documentation/Animations/Available-Animations',
   },
-  SVG: '/documentation/SVG',
+  SVG: {
+    index: '/documentation/SVG',
+    'SVG MORPHING': '/documentation/SVG/svgMorphing',
+  },
   Properties: {
     index: '/documentation/Properties',
     Iteration: '/documentation/Properties/Iteration',
