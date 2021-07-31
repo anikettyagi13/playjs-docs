@@ -23,7 +23,7 @@ export function TextAnimations(target, delay = 0) {
 export function SVGAnimation() {
   play({
     targets: '#play_icon',
-    translateX: [-200, 0],
+    translateX: [-80, 0],
     opacity: [0, 1],
     delay: 0,
     duration: 1000,
@@ -41,7 +41,7 @@ export function SVGAnimation() {
   })
   play({
     targets: '#play_icon',
-    translateX: [0, 200],
+    translateX: [0, 80],
     delay: 5000,
     duration: 1000,
     endDelay: 5000,
@@ -106,7 +106,7 @@ export function OnViewAnimation(target, threshold) {
 export function AnimateBlock() {
   play({
     targets: '.block',
-    translateX: [-150, 0],
+    translateX: [-80, 0],
     duration: 1000,
     endDelay: 3000,
     threshold: 1,
@@ -142,7 +142,7 @@ export function AnimateBlock() {
   })
   play({
     targets: '.block',
-    translateX: [0, 200],
+    translateX: [0, 80],
     borderRadius: [75, 0],
     delay: 3000,
     duration: 1000,

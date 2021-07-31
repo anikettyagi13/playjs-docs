@@ -41,7 +41,6 @@ export default function AnimationEx() {
       const obj = decomposeValue(
         document.getElementsByClassName('widthString')[0].value,
       )
-      console.log(obj)
       Play({
         targets: ['.red', '.yellow'],
         late: 0,
@@ -54,7 +53,6 @@ export default function AnimationEx() {
     }
   }, [play])
   useEffect(() => {
-    console.log(document.getElementsByClassName('widthArray'))
     let k = document.getElementsByClassName('widthArray')[0].value
     if (k.length > 1 && play2 !== '') {
       Play({
@@ -67,7 +65,6 @@ export default function AnimationEx() {
   }, [play2])
   useEffect(() => {
     if (play3 !== '') {
-      console.log('asdas', document.getElementsByClassName('yellowFunction'))
       Play({
         targets: ['.redFunction', '.yellowFunction'],
         duration: 2500,

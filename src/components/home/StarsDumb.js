@@ -23,7 +23,7 @@ export function StarDumb() {
         viewBox="0 0 86 95"
         fill="none"
         style={{
-          marginTop: '-10rem',
+          marginTop: '-1rem',
           marginLeft: '-10rem',
           position: 'absolute',
         }}
@@ -41,8 +41,8 @@ export function StarDumb() {
         viewBox="0 0 86 95"
         fill="none"
         style={{
-          // marginTop: '25rem',
-          marginLeft: '-30rem',
+          marginTop: '18rem',
+          marginLeft: '9rem',
           position: 'absolute',
         }}
         xmlns="http://www.w3.org/2000/svg"
@@ -58,26 +58,8 @@ export function StarDumb() {
         height="40"
         viewBox="0 0 86 95"
         style={{
-          marginTop: '12rem',
-          marginLeft: '-15rem',
-          position: 'absolute',
-        }}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          className="small_stars"
-          d="M43 0L46.4385 46.9785L85.7975 36.2766L48.5637 54.609L69.4503 94.9734L43 59.325L16.5497 94.9734L37.4363 54.609L0.202457 36.2766L39.5615 46.9785L43 0Z"
-          fill="#C4C4C4"
-        />
-      </svg>
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 86 95"
-        style={{
-          marginLeft: '-25rem',
-          marginTop: '-10rem',
+          marginLeft: '5rem',
+          marginTop: '-1rem',
           position: 'absolute',
         }}
         fill="none"
