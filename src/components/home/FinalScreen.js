@@ -4,13 +4,25 @@ import { Link } from 'react-router-dom'
 import { NavigationReference } from '../../Navigation/NavigationRefrence'
 export default function FinalScreen() {
   const docuRef = useRef(null)
+  const githubRef = useRef(null)
   function openDocumentation() {
     docuRef.current.click()
+  }
+  function openGithub() {
+    githubRef.current.click()
   }
   return (
     <Grid container item xs={12}>
       <Grid container item md={6} xs={12} justifyContent="center">
-        <Grid container item xs={12} justifyContent="center">
+        <Grid
+          container
+          item
+          xs={12}
+          justifyContent="center"
+          onClick={() => {
+            openGithub()
+          }}
+        >
           <div className="card">
             <div className="card2">
               <h2>
@@ -35,6 +47,7 @@ export default function FinalScreen() {
         md={6}
         justifyContent="center"
         style={{ marginTop: '4px' }}
+        onClick={openDocumentation}
       >
         <div className="card">
           <div className="card2">
@@ -53,6 +66,7 @@ export default function FinalScreen() {
           </div>
         </div>
         <Link to={NavigationReference.Targets.index} ref={docuRef}></Link>
+        <Link to={NavigationReference.github} ref={githubRef}></Link>
       </Grid>
     </Grid>
   )

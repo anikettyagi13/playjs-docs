@@ -56,7 +56,7 @@ export default function Documentation() {
             © Aniket Tyagi
           </Typography>
           <a
-            href={NavigationReference.Github}
+            href={NavigationReference.github}
             style={{ marginLeft: '10px', marginTop: '3px' }}
           >
             <img

@@ -38,7 +38,9 @@ html {
 .exceptBlue {
   color: rgb(184, 184, 87);
 }
-
+.addBrownish {
+  color: rgba(245, 38, 11, 0.685);
+}
 .exceptBlue input,
 select {
   /* width: 50px; */

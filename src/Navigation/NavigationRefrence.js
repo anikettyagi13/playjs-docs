@@ -1,4 +1,12 @@
 export const NavigationReference = {
+  download: '/download',
+  downloadLink: {
+    es6: 'https://downgit.github.io/#/home?url=https://github.com/anikettyagi13/playjs/blob/master/useable/play.js',
+    export:
+      'https://downgit.github.io/#/home?url=https://github.com/anikettyagi13/playjs/blob/master/useable/playE.js',
+    html: 'https://downgit.github.io/#/home?url=https://github.com/anikettyagi13/playjs/blob/master/useable/play.min.js',
+  },
+  github: 'https://github.com/anikettyagi13/playjs',
   documentation: '/documentation',
   home: '/',
   Targets: {

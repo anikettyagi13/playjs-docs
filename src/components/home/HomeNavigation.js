@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 import { NavigationReference } from '../../Navigation/NavigationRefrence'
+import GetApp from '@material-ui/icons/GetApp'
 
 const useStyles = makeStyles((theme) => ({
   color: {
@@ -63,13 +64,33 @@ export default function HomeNavigation() {
                 <span className="hide">DOCUMENTATION</span>
               </Link>
             </div>
-            <span className="unhide">
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
-                alt="GITHUB"
-              />
-            </span>
-            <div className="hide">GITHUB</div>
+            <div>
+              <a
+                href={NavigationReference.github}
+                color="secondary"
+                style={{ color: '#1B3038', textDecoration: 'none' }}
+              >
+                <span className="unhide">
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+                    alt="GITHUB"
+                  />
+                </span>
+                <div className="hide">GITHUB</div>
+              </a>
+            </div>
+            <div>
+              <Link
+                to={NavigationReference.download}
+                color="secondary"
+                style={{ color: '#1B3038', textDecoration: 'none' }}
+              >
+                <span className="unhide">
+                  <GetApp />
+                </span>
+                <div className="hide">Download</div>
+              </Link>
+            </div>
           </div>
         </Toolbar>
       </AppBar>

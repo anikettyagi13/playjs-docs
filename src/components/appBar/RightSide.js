@@ -3,6 +3,8 @@ import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import { NavigationReference } from '../../Navigation/NavigationRefrence'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({}))
 export default function RightSide() {
@@ -17,10 +19,14 @@ export default function RightSide() {
       style={{ marginTop: '1px' }}
     >
       <Grid item>
-        <GetAppIcon color="secondary" fontSize="20px" />
+        <Link to={NavigationReference.download}>
+          <GetAppIcon color="secondary" fontSize="20px" />
+        </Link>
       </Grid>
       <Grid item>
-        <GitHubIcon color="secondary" fontSize="20px" />
+        <a href={NavigationReference.github}>
+          <GitHubIcon color="secondary" fontSize="20px" />
+        </a>
       </Grid>
     </Grid>
   )
