@@ -109,13 +109,13 @@ export default function HomeNavigation() {
           </div>
         </Toolbar>
       </AppBar>
-      <a
-        href={NavigationReference.home}
+      <Link
+        to={NavigationReference.home}
         ref={homeRef}
         style={{ display: 'none' }}
       >
         home
-      </a>
+      </Link>
     </div>
   )
 }
