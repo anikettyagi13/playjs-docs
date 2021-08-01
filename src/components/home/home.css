@@ -131,6 +131,9 @@ nav {
 .icon:hover div {
   text-decoration: underline;
 }
+.animateText {
+  opacity: 0;
+}
 .card {
   background-color: #ffffff;
   /* opacity: 0; */

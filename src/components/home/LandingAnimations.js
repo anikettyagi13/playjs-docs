@@ -105,50 +105,15 @@ export function OnViewAnimation(target, threshold) {
 }
 export function AnimateBlock() {
   play({
-    targets: '.block',
-    translateX: [-80, 0],
+    targets: '.animateBlock',
+    height: () => {
+      return play.random(50, 220)
+    },
     duration: 1000,
-    endDelay: 3000,
-    threshold: 1,
+    animationFunction: 'ease-linear',
+    threshold: 0.5,
+    direction: 'alternate',
     iteration: true,
-  })
-  play({
-    targets: '.block',
-    borderRadius: 75,
-    rotateZ: 500,
-    scaleX: 1.5,
-    scaleY: 1.5,
-    backgroundColor: 'rgb(231,111,81)',
-    duration: 1000,
-    delay: 1000,
-    animation: 'ease-linear',
-    endDelay: 3000,
-    threshold: 1,
-    iteration: true,
-  })
-  play({
-    targets: '.block',
-    scaleX: [1.5, 1],
-    scaleY: [1.5, 1],
-    rotateZ: -500,
-    backgroundColor: ['rgb(231,111,81)', 'rgb(236,206,131)'],
-    duration: 1000,
-    delay: 2000,
-    animation: 'ease-linear',
-    endDelay: 3000,
-    threshold: 1,
-    whenVisible: true,
-    iteration: true,
-  })
-  play({
-    targets: '.block',
-    translateX: [0, 80],
-    borderRadius: [75, 0],
-    delay: 3000,
-    duration: 1000,
-    iteration: true,
-    endDelay: 3000,
-    threshold: 1,
   })
 }
 

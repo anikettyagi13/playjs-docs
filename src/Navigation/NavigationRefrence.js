@@ -40,4 +40,6 @@ export const NavigationReference = {
     Late: '/documentation/Parameters/Late',
     Direction: '/documentation/Parameters/Direction',
   },
+  404: '*',
+  npm: 'https://www.npmjs.com/package/playyjs',
 }
