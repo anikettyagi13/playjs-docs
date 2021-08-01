@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HomeNavigation() {
   const classes = useStyles()
+  const homeRef = createRef(null)
+  function homePush() {
+    console.log('asdas')
+    homeRef.current.click()
+  }
 
   return (
     <div className={classes.root}>
@@ -38,15 +43,25 @@ export default function HomeNavigation() {
             viewBox="0 0 46 38"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            onClick={() => {
+              homePush()
+            }}
           >
             <path
               d="M0 0L46 19.2468L0 38L13.6231 19.2468L0 0Z"
               fill="#0EDA3B"
             />
           </svg>
-          <Typography variant="h6" className={classes.title}>
+          <Typography
+            variant="h6"
+            className={classes.title}
+            onClick={() => {
+              homePush()
+            }}
+          >
             <span id="play">PLAY</span> <span id="js">JS</span>
           </Typography>
+
           <div id="navs">
             <div>
               <Link
@@ -94,6 +109,13 @@ export default function HomeNavigation() {
           </div>
         </Toolbar>
       </AppBar>
+      <a
+        href={NavigationReference.home}
+        ref={homeRef}
+        style={{ display: 'none' }}
+      >
+        home
+      </a>
     </div>
   )
 }

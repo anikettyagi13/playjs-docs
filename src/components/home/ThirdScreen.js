@@ -1,7 +1,6 @@
 import { Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import HeightAnimation from './HeightAnimation'
-import HeightAnimaion from './HeightAnimation'
 
 export default function ThirdScreen() {
   return (
