@@ -16,7 +16,6 @@ export default function Direction() {
     "Write endDelay's value in the input field and click on PLAY NOW to see how to select different targets. "
   useEffect(() => {
     let k = document.getElementsByClassName('direction')[0].value
-    console.log(k, typeof k)
     if (k.length > 0 && play !== '') {
       Play({
         targets: ['.yellowDirection', '.redDirection'],

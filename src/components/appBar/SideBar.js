@@ -173,7 +173,6 @@ export default function SideBar({ handleDrawerClose, open }) {
     }
     if (k !== 1) {
       e.stopPropagation()
-      console.log(open)
       setLinkTo(NavigationReference[opened][open])
     }
   }

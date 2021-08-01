@@ -9,7 +9,6 @@ import EndDelay from './submenu/EndDelay'
 import Direction from './submenu/Direction'
 export default function Parameters() {
   function smoothScrollTo(target) {
-    console.log(target)
     document.querySelector(target).scrollIntoView({
       behaviour: 'smooth',
     })
@@ -18,6 +17,8 @@ export default function Parameters() {
     try {
       if (window.location.href.split('-')[1].split('/')[4]) {
         smoothScrollTo(`#${window.location.href.split('-')[1].split('/')[4]}`)
+      } else {
+        smoothScrollTo('#top')
       }
     } catch (e) {
       console.error(e)
@@ -28,7 +29,7 @@ export default function Parameters() {
   }, [window.location.href])
   return (
     <>
-      <Grid container xs={12}>
+      <Grid container xs={12} id="top">
         <Grid
           container
           spacing={3}

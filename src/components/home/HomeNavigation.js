@@ -29,7 +29,6 @@ export default function HomeNavigation() {
   const classes = useStyles()
   const homeRef = createRef(null)
   function homePush() {
-    console.log('asdas')
     homeRef.current.click()
   }
 

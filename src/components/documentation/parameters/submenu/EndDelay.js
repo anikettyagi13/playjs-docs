@@ -25,7 +25,6 @@ export default function EndDelay() {
       } else {
         value = obj.numbers[0]
       }
-      console.log(typeof value)
       Play({
         targets: ['.yellowEDelay', '.redEDelay'],
         translateX: '250px',

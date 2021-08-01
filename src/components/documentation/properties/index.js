@@ -11,7 +11,6 @@ import WhenVisible from './submenu/When Visible'
 
 export default function Properties() {
   function smoothScrollTo(target) {
-    console.log(target)
     document.querySelector(target).scrollIntoView({
       behaviour: 'smooth',
     })
@@ -20,6 +19,8 @@ export default function Properties() {
     try {
       if (window.location.href.split('-')[1].split('/')[4]) {
         smoothScrollTo(`#${window.location.href.split('-')[1].split('/')[4]}`)
+      } else {
+        smoothScrollTo('#top')
       }
     } catch (e) {
       console.error(e)
@@ -30,7 +31,7 @@ export default function Properties() {
   }, [window.location.href])
   return (
     <>
-      <Grid container xs={12}>
+      <Grid container xs={12} id="top">
         <Grid
           container
           spacing={3}

@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AccordionTable(props) {
   const rows = props.rows
-  console.log(rows)
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(
     rows[0] ? rows[0].title : false,

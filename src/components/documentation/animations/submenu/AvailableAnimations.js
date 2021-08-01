@@ -1,10 +1,26 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Divider, Grid, Typography } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { NavigationReference } from '../../../../Navigation/NavigationRefrence'
 import { Link } from 'react-router-dom'
 import AccordionTable from '../../../../TableUtils'
 
 export default function AvailableAnimations() {
+  function smoothScrollTo(target) {
+    document.querySelector(target).scrollIntoView({
+      behaviour: 'smooth',
+    })
+  }
+  function getIfSmoothScrollInitially() {
+    try {
+      smoothScrollTo('#top')
+    } catch (e) {
+      console.error(e)
+    }
+  }
+  useEffect(() => {
+    getIfSmoothScrollInitially()
+  }, [window.location.href])
   const rows = [
     {
       title: 'width',
@@ -122,7 +138,7 @@ export default function AvailableAnimations() {
     },
   ]
   return (
-    <Grid container item xs={12} style={{ overflowX: 'hidden' }}>
+    <Grid container item xs={12} style={{ overflowX: 'hidden' }} id="top">
       <Grid
         container
         spacing={3}

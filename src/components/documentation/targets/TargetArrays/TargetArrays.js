@@ -20,14 +20,11 @@ export default function TargetArrays() {
     k = k.replace('yellow', 'yellowArray')
     k = k.replace('red', 'redArray')
 
-    console.log(document.querySelectorAll('.yellowArray'), k.split(','))
     if (k.length > 0 && play !== '') {
       Play({
         targets: k.split(','),
         translateX: 250,
       })
-    } else {
-      console.log('asd')
     }
   }, [play])
   return (

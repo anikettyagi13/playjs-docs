@@ -11,6 +11,9 @@ const styles = makeStyles({
   codeText: {
     marginRight: '5px',
   },
+  margin: {
+    marginLeft: '5px',
+  },
 })
 
 export default function Download() {
@@ -76,7 +79,9 @@ export default function Download() {
             <span className={`exceptBlue ${classes.codeText}`}>playyjs</span>{' '}
             <span className={`addBluish ${classes.codeText}`}>--save</span>{' '}
           </Grid>
-          <Typography variant="p">USAGE</Typography>
+          <Typography variant="p" className={classes.margin}>
+            USAGE
+          </Typography>
           <Grid
             item
             container

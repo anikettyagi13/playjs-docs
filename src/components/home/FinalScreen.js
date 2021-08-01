@@ -5,10 +5,10 @@ import { NavigationReference } from '../../Navigation/NavigationRefrence'
 export default function FinalScreen() {
   const docuRef = useRef(null)
   const githubRef = useRef(null)
-  function openDocumentation() {
+  function openDocumentation(e) {
     docuRef.current.click()
   }
-  function openGithub() {
+  function openGithub(e) {
     githubRef.current.click()
   }
   return (
@@ -19,8 +19,8 @@ export default function FinalScreen() {
           item
           xs={12}
           justifyContent="center"
-          onClick={() => {
-            openGithub()
+          onClick={(e) => {
+            openGithub(e)
           }}
         >
           <div className="card">
@@ -47,27 +47,40 @@ export default function FinalScreen() {
         md={6}
         justifyContent="center"
         style={{ marginTop: '4px' }}
-        onClick={openDocumentation}
       >
-        <div className="card">
-          <div className="card2">
-            <h2>
-              ANIMATE YOUR
-              <br /> WEBSITE?
-            </h2>
+        <Grid
+          container
+          item
+          xs={12}
+          justifyContent="center"
+          onClick={openDocumentation}
+        >
+          <div className="card">
+            <div className="card2">
+              <h2>
+                ANIMATE YOUR
+                <br /> WEBSITE?
+              </h2>
 
-            <p>HEAD HERE</p>
+              <p>HEAD HERE</p>
+            </div>
+            <div className="cardimg">
+              <img
+                src="https://img.icons8.com/ios-glyphs/90/000000/service.png"
+                alt="Documentation"
+              />
+            </div>
           </div>
-          <div className="cardimg">
-            <img
-              src="https://img.icons8.com/ios-glyphs/90/000000/service.png"
-              alt="Documentation"
-            />
-          </div>
-        </div>
-        <Link to={NavigationReference.Targets.index} ref={docuRef}></Link>
-        <Link to={NavigationReference.github} ref={githubRef}></Link>
+        </Grid>
       </Grid>
+      <Link to={NavigationReference.Targets.index} ref={docuRef}></Link>
+      <a
+        href={NavigationReference.github}
+        ref={githubRef}
+        style={{ display: 'none' }}
+      >
+        m
+      </a>
     </Grid>
   )
 }

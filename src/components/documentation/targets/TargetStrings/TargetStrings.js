@@ -18,11 +18,6 @@ export default function TargetStrings() {
       document.getElementsByClassName('targetString')[0].value.length > 1 &&
       play !== ''
     ) {
-      console.log(
-        document.querySelectorAll(
-          document.getElementsByClassName('targetString')[0].value,
-        ),
-      )
       Play({
         targets: document.getElementsByClassName('targetString')[0].value,
         translateX: 250,

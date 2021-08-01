@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Divider, Grid, Typography } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { NavigationReference } from '../../../../Navigation/NavigationRefrence'
@@ -83,8 +84,18 @@ export default function AnimationEx() {
       behaviour: 'smooth',
     })
   }
+  function getIfSmoothScrollInitially() {
+    try {
+      smoothScrollTo('#top')
+    } catch (e) {
+      console.error(e)
+    }
+  }
+  useEffect(() => {
+    getIfSmoothScrollInitially()
+  }, [window.location.href])
   return (
-    <Grid container xs={12}>
+    <Grid container xs={12} id="top">
       <Grid
         container
         spacing={3}

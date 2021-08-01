@@ -5,7 +5,6 @@ import React, { useEffect } from 'react'
 import SVGMORPHING from './submenu/svgMorphing'
 export default function SVG() {
   function smoothScrollTo(target) {
-    console.log(target)
     document.querySelector(target).scrollIntoView({
       behaviour: 'smooth',
     })
@@ -14,6 +13,8 @@ export default function SVG() {
     try {
       if (window.location.href.split('-')[1].split('/')[4]) {
         smoothScrollTo(`#${window.location.href.split('-')[1].split('/')[4]}`)
+      } else {
+        smoothScrollTo('#top')
       }
     } catch (e) {
       console.error(e)
@@ -24,7 +25,7 @@ export default function SVG() {
   }, [window.location.href])
   return (
     <>
-      <Grid container xs={12}>
+      <Grid container xs={12} id="top">
         <Grid
           container
           spacing={3}
