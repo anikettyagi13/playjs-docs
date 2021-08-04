@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Typography } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -71,13 +71,15 @@ export default function Layout() {
   const [open, setOpen] = React.useState(
     window.screen.width > 780 ? true : false,
   )
-  try {
-    if (!window.location.href.split('-')[1].split('/')[3]) {
-      window.location.href += '/Targets'
+  useEffect(() => {
+    try {
+      if (!window.location.href.split('-')[1].split('/')[3]) {
+        window.location.href += 'Targets'
+      }
+    } catch (e) {
+      console.error('404')
     }
-  } catch (e) {
-    console.error('404')
-  }
+  }, [])
 
   const handleDrawerOpen = () => {
     setOpen(true)
