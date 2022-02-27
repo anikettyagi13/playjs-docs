@@ -16,7 +16,6 @@ export default function Code({ codeBlock, dontFormat }) {
       setReloadCode(false)
     }
   }, [code && reloadCode])
-
   return (
     <p
       className="codeText exceptBlue"

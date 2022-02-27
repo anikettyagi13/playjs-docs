@@ -27,7 +27,7 @@ export default function AnimationEx() {
   const info2 =
     'In this example we are using Width to show the animations. Write the final width of the blocks. Initial width of the blocks is 50px so 200% would be 100px. For eg. [100,200], [100px,200px], [100%,200%]'
   const [code3] = useState(
-    "play({<span>&emsp;targets:['.red','.yellow'] &emsp;,</span> <br/><span>&emsp;duration:&emsp;2500,</span><br/><span>&emsp;width:&emsp;()=>{<br/>&emsp;&emsp;return random(50,200)<br/>&emsp;}</span> <br/>&emsp;direction:&emsp;'alternate' <br/>&emsp;iteration:&emsp;true})",
+    "play({<span>&emsp;targets:['.red','.yellow'] &emsp;,</span> <br/><span>&emsp;duration:&emsp;2500,</span><br/><span>&emsp;width:(t)=>{<br/>&emsp;&emsp;return t/10<br/>&emsp;}</span> <br/>&emsp;direction:&emsp;'alternate' <br/>&emsp;iteration:&emsp;true})",
   )
   const codeBlock3 =
     "play({<span>&emsp;targets: &emsp;'CSS SELECTOR HERE',</span> <br/><span>&emsp;duration:&emsp;1000,</span><br/><span>&emsp;width:&emsp;your function</span> <br/>})"
@@ -70,8 +70,8 @@ export default function AnimationEx() {
         targets: ['.redFunction', '.yellowFunction'],
         duration: 2500,
         late: 0,
-        width: () => {
-          return Play.random(50, 200)
+        width: (t) => {
+          return t / 10
         },
         direction: 'alternate',
         iteration: true,
@@ -223,9 +223,12 @@ export default function AnimationEx() {
               <Typography variant="p">
                 <br />
                 Functions are used to get some value based on which animation
-                will work. These functions will be called after the animations
-                has been finished and requires a new value for animation. Play
-                js provides a function random which you can Use
+                will work. If your function requires a parameter, then current
+                animation timePassed is given and you are expected to return a
+                value. If no parameter is required then functions will be called
+                before starting and ending of the animations and requires a new
+                value for animation. Play js provides a function random which
+                you can Use
                 <br />
                 <br />
                 random(end, start) // function parameters
